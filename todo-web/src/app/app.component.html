@@ -1,4 +1,14 @@
 <header>Task CheckList</header>
+<h1>
+        Todo App Project
+      <div>
+        <button mat-flat-button color="primary" (click)="openUserLogin()">User Login</button>
+      </div>
+      <div *ngIf="displayLogin">
+        <app-user-login></app-user-login>
+      </div>
+</h1>
+
 <header>Part 2</header>
 <p>THis is paragraph</p>
-<p>Rohan sucks at Clash royale</p>
+<app-make-list></app-make-list>

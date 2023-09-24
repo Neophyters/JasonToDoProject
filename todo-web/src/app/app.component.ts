@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jasonToDoProject';
+  displayLogin: boolean = false;
+  constructor(
+    
+  ) {
+
+  }
+
+  openUserLogin() {
+    this.displayLogin = !this.displayLogin;
+  }
 }
