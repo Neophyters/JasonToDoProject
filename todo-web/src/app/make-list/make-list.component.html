@@ -1,0 +1,12 @@
+<div [formGroup]="makeListForm">
+    <p style="color: blue; font-size: 16px;">make-list works!</p>
+    <div>
+        <label for="list">Make a List:</label>
+        <input type="text" id="list" name="list" formControlName="newItem" (keydown.enter)="addToList()">
+    </div>
+    <div *ngFor="let item of completeList">
+        <ul>
+            {{item}};
+        </ul>
+    </div>
+</div>

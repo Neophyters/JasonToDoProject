@@ -1,1 +1,12 @@
-<p>user-login works!</p>
+<div [formGroup]="storeLogin">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" formControlName="storeUsername">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" formControlName="storePassword">
+    </div>
+    <button mat-flat-button color="primary" (click)="submitLoginInfo()">Submit</button>
+</div>
+

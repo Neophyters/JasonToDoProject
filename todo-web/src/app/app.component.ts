@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog'
 import { UserLoginComponent } from './user-login/user-login.component';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,14 +10,13 @@ import { UserLoginComponent } from './user-login/user-login.component';
 export class AppComponent {
   title = 'jasonToDoProject';
   displayLogin: boolean = false;
-
   constructor(
-    private dialog: MatDialog
+    
   ) {
 
   }
 
   openUserLogin() {
-    this.dialog.open(UserLoginComponent);
+    this.displayLogin = !this.displayLogin;
   }
 }
